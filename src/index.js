@@ -43,24 +43,38 @@ window
            titulo.textContent = item.name;
 
            const status =document.createElement('h3');
-           status.className = "text-sm"
+           status.className = "text-lg"
            status.textContent = item.status;
            // Crear precio
             const gender = document.createElement ('div');
             gender.className = "text-lg"
             gender.textContent = item.gender;
             
-            const location =document.createElement ('div');
+            const location1 = document.createElement ('div');
+            location1.className = "text-sm"
+            location1.textContent = item.location.url;
+
+            const originame = document.createElement ('div');
+            originame.className = "text-lg"
+            originame.textContent = item.origin.name;
+
+            const origin = document.createElement ('div');
+            origin.className = "text-sm"
+            origin.textContent = item.origin.url;
+
+            const location = document.createElement ('div');
             location.classname="text-lg"
-            location.textContent =item.location
+            location.textContent =item.location.name;
            // Creamos un contenedor el título y el precio
            const datosrick = document.createElement("div")
            datosrick.className = "text-center md:text-left";
            datosrick.appendChild(titulo);
            datosrick.appendChild(status);
            datosrick.appendChild(gender);
-           datosrick.appendChild(location)
-
+           datosrick.appendChild(location);
+           datosrick.appendChild(location1);
+           datosrick.appendChild(originame);
+           datosrick.appendChild(origin);
            // Metemos todo dentro de una tarjeta contenedora
            const card = document.createElement("div");
            card.className = "md:flex bg-white rounded-lg p-6 hover:bg-gray-300";
