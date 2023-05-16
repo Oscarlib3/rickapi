@@ -21,10 +21,13 @@ const formatPrice = price => {
  }
 
 // web api
+const minimo = 1;
+const maximo = 42;
 
 // Conectarnos al server
+const random = () => Math.floor(Math.random()*(maximo - minimo)) + minimo;
 window
-   .fetch(`${baseUrl}/api/character`)
+   .fetch(`${baseUrl}/api/character?page=${random()}`)
    .then(respuesta => respuesta.json())
    .then(responseJson => {
 
